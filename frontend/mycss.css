@@ -1,0 +1,270 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    border-radius: 0 !important;
+    margin: 0;
+    border: 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-nav li a {
+    color: #333 !important;
+    font-size: 18px;
+}
+
+.navbar-nav li a:hover {
+    background-color: #ddd !important;
+}
+
+.navbar-nav .active a {
+    background-color: #e7e7e7 !important;
+}
+
+.navbar-right .glyphicon {
+    margin-right: 5px;
+}
+
+/* Carousel */
+.carousel-inner > .item > img {
+    width: 100%;
+    max-height: 620px;
+}
+
+.carousel-caption {
+    color: #fff;
+}
+
+.carousel-caption p {
+    font-size: 24px;
+}
+
+.carousel-caption h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Thumbnails */
+.thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.thumbnail {
+    border: none;
+}
+
+.row {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+/* Background Slide Image */
+.background-wrapper {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    padding: 10rem 0;
+}
+
+.background-wrapper h3 {
+    font-size: 28px;
+}
+
+.background-wrapper h1 {
+    font-size: 48px;
+    margin-top: 1rem;
+}
+
+/* Footer */
+#footer {
+    background-color: #333;
+    color: #999;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#footer .icons a {
+    color: grey;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#footer .icons a:hover {
+    color: white;
+}
+
+.copyright {
+    margin-top: 1rem;
+}
+
+/* Modal */
+.modal-content {
+    padding: 2rem;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    font-size: 24px;
+}
+
+.modal-body label {
+    font-size: 16px;
+}
+
+.modal-body input {
+    margin-bottom: 1rem;
+}
+
+.btn-block {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 0.5rem 0;
+}
+
+.btn-block:hover {
+    background-color: #555;
+}
+
+.btn-block a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .carousel-caption p {
+        font-size: 18px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 24px;
+    }
+
+    .background-wrapper h3 {
+        font-size: 20px;
+    }
+
+    .background-wrapper h1 {
+        font-size: 32px;
+    }
+
+    .modal-content {
+        padding: 1rem;
+    }
+}
+
+
+#footer {
+    padding: 4rem 0 2rem 0 ;
+    background: #000;
+    text-align: center;
+    width: 100% !important;
+    bottom: 0;
+
+}
+
+ul.icons li {
+    display: inline-block;
+    padding: 0 2rem 0 0;
+    font-size: 36px;
+}	
+
+
+
+
+
+/*booking*/
+
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Use Google Font Poppins */
+}
+
+.navbar-inverse {
+    background-color: #333; /* Background color of the navbar */
+    border-color: #333; /* Border color of the navbar */
+}
+
+.navbar-brand {
+    color: #fff; /* Color of the navbar brand */
+}
+
+.navbar-nav > li > a {
+    color: #fff; /* Color of the navbar links */
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+    background-color: #555; /* Background color of the navbar links on hover */
+}
+
+.panel-transparent {
+    background: none; /* Make panel background transparent */
+    border-color: transparent; /* Make panel border transparent */
+}
+
+.panel-heading {
+    background-color: #333; /* Background color of panel heading */
+    border-color: #333; /* Border color of panel heading */
+}
+
+.panel-body {
+    background-color: #f9f9f9; /* Background color of panel body */
+    border-color: #ddd; /* Border color of panel body */
+}
+
+.input-group {
+    margin-bottom: 10px; /* Margin bottom for input groups */
+}
+
+.trans-input-area {
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent background for input fields */
+}
+
+.btn-primary {
+    background-color: #337ab7; /* Primary button background color */
+    border-color: #2e6da4; /* Primary button border color */
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #286090; /* Primary button background color on hover/focus */
+    border-color: #204d74; /* Primary button border color on hover/focus */
+}
+
+/* Footer styles */
+#footer {
+    background-color: #333; /* Background color of the footer */
+    color: #fff; /* Text color of the footer */
+    padding: 20px 0; /* Padding for the footer */
+    text-align: center; /* Center-align text in the footer */
+}
+
+.icons {
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding from the list */
+}
+
+.icons li {
+    display: inline-block; /* Display icons horizontally */
+    margin-right: 10px; /* Margin between icons */
+}
+
+.fa {
+    font-size: 24px; /* Size of the font awesome icons */
+}

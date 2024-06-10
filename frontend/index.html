@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="mycss.css">
+    <style>
+        /* Custom Navbar Styles */
+        .navbar {
+            border-radius: 0;
+            margin: 0;
+            border: 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .navbar .navbar-brand {
+            color: #fff !important;
+            padding: 0;
+        }
+
+        .navbar .navbar-brand img {
+            height: 40px;
+            display: inline-block;
+        }
+
+        .navbar .navbar-nav>li>a {
+            color: #ddd !important;
+        }
+
+        .navbar .navbar-nav>li>a:hover,
+        .navbar .navbar-nav>li.active>a {
+            color: #fff !important;
+            background-color: #444 !important;
+        }
+
+        .navbar .navbar-right>li>a {
+            color: #ddd !important;
+        }
+
+        .navbar .navbar-right>li>a:hover {
+            color: #fff !important;
+        }
+
+        .navbar .navbar-form .form-control {
+            border-radius: 0;
+        }
+
+        .navbar .navbar-form .btn-default {
+            background-color: #555;
+            border: none;
+            color: #fff;
+        }
+
+        /* Custom Carousel Styles */
+        .custom-carousel .carousel-inner>.item>img {
+            width: 100%;
+            max-height: 620px;
+            object-fit: cover;
+        }
+
+        .custom-carousel .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .custom-carousel .carousel-caption h2,
+        .custom-carousel .carousel-caption p {
+            color: #fff;
+        }
+
+        .custom-carousel .carousel-indicators li {
+            background-color: #444;
+        }
+
+        .custom-carousel .carousel-indicators .active {
+            background-color: #fff;
+        }
+
+        /* Custom Styles for Thumbnails */
+        .thumbnail img {
+            width: 100%;
+            height: auto;
+        }
+
+        .thumbnail {
+            border: none;
+        }
+
+        /* Additional Styles */
+        #more-info {
+            padding: 50px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/airline/logo.jpg" alt="BRAHMA Airlines Logo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="#more-info">More Info</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#myModal" data-toggle="modal" data-target="#myModal">
+                            <span class="glyphicon glyphicon-log-in"></span> Login
+                        </a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div id="myCarousel" class="carousel slide custom-carousel" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/airline/welcome.jpg" alt="Slide 1">
+                <div class="carousel-caption">
+                    <p>Welcome to</p>
+                    <hr style="width: 40%">
+                    <h2>BRAHMA AIRLINES</h2>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/airline/family.jpg" alt="Slide 2">
+                <div class="carousel-caption">
+                    <p>Come fly with us!</p>
+                    <hr style="width: 40%">
+                    <h2>Book your flight</h2>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/airline/lux.we" alt="Slide 3">
+                <div class="carousel-caption">
+                    <p>Why choose us!</p>
+                    <hr style="width: 40%">
+                    <h2>Luxurious & Safest</h2>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/airline/attendant.jpg" alt="Slide 4">
+                <div class="carousel-caption">
+                    <p>Have any questions?</p>
+                    <hr style="width: 40%">
+                    <h2>Contact Us</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Info Section -->
+    <div id="more-info">
+        <h2>More Information About BRAHMA Airlines</h2>
+        <p>We are dedicated to providing the best service and ensuring your safety and comfort during your flight. Learn more about our services, destinations, and special offers.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" style="background-color: #333; color: #fff; padding: 20px 0;">
+        <div class="container-fluid">
+            <ul class="icons" style="list-style: none; padding-left: 0;">
+                <li><a href="#" class="fa fa-twitter" style="color: grey; margin-right: 10px;"></a></li>
+                <li><a href="#" class="fa fa-facebook" style="color: grey; margin-right: 10px;"></a></li>
+                <li><a href="#" class="fa fa-instagram" style="color: grey; margin-right: 10px;"></a></li>
+                <li><a href="#" class="fa fa-envelope" style="color: grey; margin-right: 10px;"></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            &copy; BRAHMA Airlines. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="myjs.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("a[href='#more-info']").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

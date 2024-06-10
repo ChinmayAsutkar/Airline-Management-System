@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Itinerary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+        }
+        .navbar {
+            border-radius: 0;
+            margin: 0;
+            border: 0;
+            background-color: #0277bd;
+        }
+        .navbar h2 {
+            color: white;
+            margin: 0;
+            padding: 15px 0;
+        }
+        .background-wrapper {
+            background-image: url('images/airline/ii.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 0;
+        }
+        .panel-transparent {
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .panel-transparent .panel-heading {
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+        }
+        .panel-heading legend {
+            color: #0277bd;
+            font-weight: 600;
+        }
+        .table-hover>tbody>tr:hover {
+            background-color: #b3e5fc;
+        }
+        table {
+            color: #333;
+        }
+        footer {
+            background-color: #0277bd;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        footer .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer .icons li {
+            display: inline;
+            margin: 0 10px;
+        }
+        footer .icons .fa-twitter,
+        footer .icons .fa-instagram {
+            display: block;
+            margin: 5px 0;
+        }
+        .trans-input-area {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background-color: #0277bd;
+            border: none;
+            font-size: 24px;
+            padding: 20px;
+        }
+        .btn-primary a {
+            color: white;
+            text-decoration: none;
+        }
+        .container-fluid header h2 {
+            color: #0277bd;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div href="index.html" style="text-align: center;">
+            <h2>BRAHMA Airline</h2>
+        </div>
+    </div>
+</nav>
+
+<div class="background-wrapper">
+    <div class="container-fluid">
+        <header>
+            <h2>Flight Itinerary</h2>
+            <hr>
+        </header>
+        <div class="col-sm-12 col-sm-offset-0">
+            <div class="panel-group">
+                <div class="panel panel-default panel-transparent">
+                    <div class="panel-heading">
+                        <legend style="text-align: center;">Departure Information</legend>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover" style="font-size: 18px">
+                            <thead>
+                                <tr>
+                                    <th>Passengers</th>
+                                    <th>Flight#</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Arin</td>
+                                    <td>4091</td>
+                                    <td>Guwahati</td>
+                                    <td>Thailand</td>
+                                    <td>September 15</td>
+                                    <td>04:30 pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Arin</td>
+                                    <td>4091</td>
+                                    <td>Thailand</td>
+                                    <td>Guwahati</td>
+                                    <td>September 28</td>
+                                    <td>04:30 pm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="col-sm-12 col-sm-offset-0">
+            <div class="panel-group">
+                <div class="panel panel-default panel-transparent">
+                    <div class="panel-heading">
+                        <legend style="text-align: center;">Return Information</legend>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover" style="font-size: 18px">
+                            <thead>
+                                <tr>
+                                    <th>Passengers</th>
+                                    <th>Flight#</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Arin</td>
+                                    <td>4091</td>
+                                    <td>Guwahati</td>
+                                    <td>Thailand</td>
+                                    <td>September 15</td>
+                                    <td>04:30 pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Ali</td>
+                                    <td>4091</td>
+                                    <td>Thailand</td>
+                                    <td>Guwahati</td>
+                                    <td>September 28</td>
+                                    <td>04:30 pm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-sm-12 col-sm-offset-0">
+            <div class="trans-input-area well" style="width: 100%; padding: 1rem; text-align: center;">
+                <h2>Total Cost: 200,000 Rs.</h2>
+            </div>
+        </div>
+        
+        <br><br>
+
+        <div class="col-sm-12 col-sm-offset-0">
+            <button class="btn btn-primary btn-block trans-input-area" type="submit">
+                <a href="payment.html"><h4>Proceed to Payment</h4></a>
+            </button>
+        </div>
+        <br><br>
+    </div>
+    <br><br>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="container-fluid">
+        <ul class="icons">
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-envelope"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+        </ul>
+    </div>
+    <div class="copyright">
+        &copy; Brahma Airline. All rights reserved.
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="myjs.js"></script>
+
+</body>
+</html>
