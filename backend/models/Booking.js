@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const bookingSchema = new mongoose.Schema({
   user: {
@@ -15,12 +15,16 @@ const bookingSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  transactionId: {
-    type: String,
+  seatsBooked: {
+    type: Number,
+    required: true,
+  },
+  totalAmount: {
+    type: Number,
     required: true,
   },
 });
 
 const Booking = mongoose.model('Booking', bookingSchema);
 
-export default Booking;
+module.exports = Booking;

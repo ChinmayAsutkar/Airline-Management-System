@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const flightSchema = new mongoose.Schema({
   airline: {
@@ -25,8 +25,12 @@ const flightSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  seatsAvailable: {
+    type: Number,
+    required: true,
+  },
 });
 
 const Flight = mongoose.model('Flight', flightSchema);
 
-export default Flight;
+module.exports = Flight;
