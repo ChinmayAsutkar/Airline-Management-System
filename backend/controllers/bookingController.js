@@ -1,23 +1,28 @@
-import Booking from '../models/Booking.js';
+const Booking = require('../models/Booking');
+const Flight = require('../models/Flight');
+const User = require('../models/User');
 
-export const createBooking = async (req, res) => {
-  const { userId, flightId, transactionId } = req.body;
-
+exports.createBooking = async (req, res) => {
   try {
-    const booking = new Booking({ user: userId, flight: flightId, transactionId });
+    const { userId, flightId, date, travelClass, price } = req.body;
+
+    const booking = new Booking({ user: userId, flight: flightId, date, class: travelClass, price, status: 'Booked' });
     await booking.save();
-    res.status(201).json({ message: 'Booking created successfully' });
+
+    await User.findByIdAndUpdate(userId, { $push: { bookings: booking._id } });
+
+    res.status(201).json({ message: 'Booking created successfully', booking });
   } catch (error) {
     res.status(500).json({ message: 'Error creating booking', error });
   }
 };
 
-export const getBookings = async (req, res) => {
-  const { userId } = req.params;
-
+exports.getBookingsByUser = async (req, res) => {
   try {
+    const userId = req.params.userId;
     const bookings = await Booking.find({ user: userId }).populate('flight');
-    res.json(bookings);
+
+    res.status(200).json({ bookings });
   } catch (error) {
     res.status(500).json({ message: 'Error fetching bookings', error });
   }

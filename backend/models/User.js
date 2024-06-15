@@ -1,54 +1,10 @@
-// import mongoose from 'mongoose';
-// import bcrypt from 'bcryptjs';
-
-// const userSchema = new mongoose.Schema({
-//   name: {
-//     type: String,
-//     required: true,
-//   },
-//   email: {
-//     type: String,
-//     required: true,
-//     unique: true,
-//   },
-//   password: {
-//     type: String,
-//     required: true,
-//   },
-// });
-
-// userSchema.pre('save', async function (next) {
-//   if (!this.isModified('password')) {
-//     next();
-//   }
-//   const salt = await bcrypt.genSalt(10);
-//   this.password = await bcrypt.hash(this.password, salt);
-// });
-
-// const User = mongoose.model('User', userSchema);
-
-// export default User;
-
-
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-  name: {
-    type: String,
-    required: true,
-  },
-  otp: String,
-  otpExpiry: Date,
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  bookings: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Booking' }],
 });
 
 userSchema.pre('save', async function (next) {
@@ -60,10 +16,13 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-userSchema.methods.matchPassword = async function (password) {
-  return await bcrypt.compare(password, this.password);
+userSchema.methods.comparePassword = async function (candidatePassword) {
+  try {
+    return await bcrypt.compare(candidatePassword, this.password);
+  } catch (error) {
+    throw new Error('Compare password error');
+  }
 };
 
 const User = mongoose.model('User', userSchema);
-
 module.exports = User;

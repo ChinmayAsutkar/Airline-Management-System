@@ -1,3 +1,5 @@
+// this code is not in use
+
 const jwt = require('jsonwebtoken');
 
 const userAuth = (req, res, next) => {
